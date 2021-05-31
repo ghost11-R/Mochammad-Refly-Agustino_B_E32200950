@@ -15,7 +15,8 @@ class PendidikanController extends Controller
      */
     public function index()
     {
-        return view('backend.pendidikan.index');
+        $pendidikan = Pendidikan::get();
+        return view('backend.pendidikan.index',compact('pendidikan'));
     }
         
     /**
