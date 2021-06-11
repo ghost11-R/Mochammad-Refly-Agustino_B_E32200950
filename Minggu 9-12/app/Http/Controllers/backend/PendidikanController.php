@@ -61,9 +61,9 @@ class PendidikanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pendidikan $pendidikan)
     {
-        //
+        return view('backend.pendidikan.create',compact('pendidikan'));
     }
 
     /**
@@ -73,9 +73,12 @@ class PendidikanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pendidikan $pendidikan)
     {
-        //
+        $pendidikan->update($request->all());
+
+        return redirect()->route('pendidikan.index')
+                        ->with('success','Pendidikan berhasil diperbarui.');
     }
 
     /**
@@ -84,8 +87,10 @@ class PendidikanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pendidikan $pendidikan)
     {
-        //
+        $pendidikan->delete();
+        return redirect()->route('pendidikan.index')
+                        ->with('success','Data Pendidikan berhasil dihapus.');
     }
 }
