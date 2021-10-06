@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android android:background="@color/red">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_margin="100dp"
+        app:srcCompat="@drawable/Logo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+
+            android:layout_width="363dp"
+            android:layout_height="368dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toTopOf="parent"
+            android:background="@drawable/bg_frame"
+            >
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="3dp"
+                android:id="@+id/username"
+                android:textColor="@color/white"
+                android:hint="Username"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="50dp"
+                android:ems="10"
+                android:hint="password"
+                android:inputType="textPassword"/>
+            <ImageButton
+                android:id="@+id/masuk"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="25dp"
+                app:srcCompat="@drawable/button_masuk"/>
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="155dp"
+                android:layout_marginLeft="50dp"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+
+            <ImageButton
+                android:id="@+id/keluar"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="230dp"
+                app:srcCompat="@drawable/button_keluar"/>
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="155dp"
+                android:layout_marginLeft="255dp"
+                android:text="Keluar"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+
+           <ImageButton
+               android:id="@+id/daftar"
+               android:layout_width="235dp"
+               android:layout_height="50dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="60dp"
+               app:srcCompat="@drawable/button_daftar"/>
+            <TextView
+                android:layout_width="235dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="65dp"
+                android:layout_marginLeft="35dp"
+                android:text="Registration"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/lupapassword"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Lupa Password"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"/>
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
